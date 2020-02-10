@@ -104,6 +104,7 @@ public class TaskMethods {
 		default:
 			taskToEdit.setDueDate(scnr);
 		}
+		System.out.println("Task updated.");
 	}
 
 	// Validate yes or no
