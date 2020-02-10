@@ -14,13 +14,13 @@ public class UserInterface {
 		int userSelection;
 		boolean userContinue = true;
 
-		taskList.add(new Task("Sam", "Get a job", "3/21/20"));
-		taskList.add(new Task("Rana", "Throw a party", "2/12/20"));
-		taskList.add(new Task("Rana", "Learn Java", "3/21/20"));
-		taskList.add(new Task("Amanda", "Learn to cook", "2/15/20"));
-		taskList.add(new Task("Jeannie", "Teach yoga", "2/10/20"));
-		taskList.add(new Task("Sean", "Play pong", "2/29/20"));
-		taskList.add(new Task("Kyle", "Eat lunch", "3/1/20"));
+//		taskList.add(new Task("Sam", "Get a job", "3/21/20"));
+//		taskList.add(new Task("Rana", "Throw a party", "2/12/20"));
+//		taskList.add(new Task("Rana", "Learn Java", "3/21/20"));
+//		taskList.add(new Task("Amanda", "Learn to cook", "2/15/20"));
+//		taskList.add(new Task("Jeannie", "Teach yoga", "2/10/20"));
+//		taskList.add(new Task("Sean", "Play pong", "2/29/20"));
+//		taskList.add(new Task("Kyle", "Eat lunch", "3/1/20"));
 		
 		// Present menu
 		System.out.println("Welcome to the Task Manager.");
@@ -31,7 +31,7 @@ public class UserInterface {
 			// Switch statement to call methods
 			switch (menuSelection) {
 			case 1:
-				// List Tasks
+				// List Tasks by method
 				System.out.println("[1] Display All Tasks, [2] Display by Name, [3] Display by Date");
 				int displaySelection = Validator.getInt(scnr, 1, 3);
 				switch (displaySelection) {
@@ -76,6 +76,7 @@ public class UserInterface {
 				}
 				break;
 			case 5:
+				// Edit task
 				tm.listTask(taskList);
 				System.out.println("Select a task to edit.");
 				userSelection = Validator.getInt(scnr, 1, taskList.size());
